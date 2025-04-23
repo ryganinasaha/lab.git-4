@@ -133,3 +133,4 @@ bsoncxx::builder::basic::document SessionAgregator::getFilter(std::string userLo
 }
 print("hi")
 print("by")
+print("ha")
