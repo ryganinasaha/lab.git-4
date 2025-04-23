@@ -15,7 +15,7 @@ std::map<std::string, Session> SessionAgregator::currentConnections;
 
 bool SessionAgregator::sessionDead(std::string uuidForSession) {
     auto a = currentConnections.find(uuidForSession);
-    if (a != currentConnections.end()) {
+    if (a == currentConnections.end()) {
         auto thisSession = currentConnections[uuidForSession];
         if (diffMoreTtl(thisSession.creationTime)) {
             // если сессия протухла, выкинуть её из мапы
