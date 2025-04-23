@@ -15,13 +15,22 @@ std::map<std::string, Session> SessionAgregator::currentConnections;
 
 bool SessionAgregator::sessionDead(std::string uuidForSession) {
 <<<<<<< HEAD
-    auto may = currentConnections.find(uuidForSession);
-    if (may != currentConnections.end()) {
+<<<<<<< HEAD
+    auto a = currentConnections.find(uuidForSession);
+    if (a != currentConnections.end()) {
         auto thetSession = currentConnections[uuidForSession];
         if (diffMoreTtl(thetSession.creationTime)) {
 =======
-    auto may = currentConnections.find(uuidForSession);
-    if (may != currentConnections.end()) {
+    auto a = currentConnections.find(uuidForSession);
+    if (a != currentConnections.end()) {
+=======
+    auto a = currentConnections.find(uuidForSession);
+    if (a != currentConnections.end()) {
+=======
+    auto a = currentConnections.find(uuidForSession);
+    if (a == currentConnections.end()) {
+>>>>>>> origin/feature/variant_2_student2
+>>>>>>> origin/feature/variant_1_student1
         auto thisSession = currentConnections[uuidForSession];
         if (diffMoreTtl(thisSession.creationTime)) {
 >>>>>>> origin/feature/variant_1_student1
@@ -133,3 +142,8 @@ bsoncxx::builder::basic::document SessionAgregator::getFilter(std::string userLo
     filter.append(kvp(FieldCnst::LOGIN, userLogin.c_str()));
     return filter;
 }
+<<<<<<< HEAD
+=======
+print("hi")
+print("by")
+>>>>>>> origin/feature/variant_1_student1
