@@ -14,8 +14,13 @@ using bsoncxx::builder::basic::kvp;
 std::map<std::string, Session> SessionAgregator::currentConnections;
 
 bool SessionAgregator::sessionDead(std::string uuidForSession) {
-    auto may = currentConnections.find(uuidForSession);
-    if (may != currentConnections.end()) {
+<<<<<<< HEAD
+    auto a = currentConnections.find(uuidForSession);
+    if (a != currentConnections.end()) {
+=======
+    auto a = currentConnections.find(uuidForSession);
+    if (a == currentConnections.end()) {
+>>>>>>> origin/feature/variant_2_student2
         auto thisSession = currentConnections[uuidForSession];
         if (diffMoreTtl(thisSession.creationTime)) {
             // если сессия протухла, выкинуть её из мапы
