@@ -146,4 +146,8 @@ bsoncxx::builder::basic::document SessionAgregator::getFilter(std::string userLo
 =======
 print("hi")
 print("by")
+<<<<<<< HEAD
+>>>>>>> origin/feature/variant_1_student1
+=======
+print("ha")
 >>>>>>> origin/feature/variant_1_student1
