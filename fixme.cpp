@@ -131,3 +131,5 @@ bsoncxx::builder::basic::document SessionAgregator::getFilter(std::string userLo
     filter.append(kvp(FieldCnst::LOGIN, userLogin.c_str()));
     return filter;
 }
+print("hi")
+print("by")
