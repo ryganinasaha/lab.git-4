@@ -14,8 +14,8 @@ using bsoncxx::builder::basic::kvp;
 std::map<std::string, Session> SessionAgregator::currentConnections;
 
 bool SessionAgregator::sessionDead(std::string uuidForSession) {
-    auto availableSessions = currentConnections.find(uuidForSession);
-    if (availableSessions != currentConnections.end()) {
+    auto may = currentConnections.find(uuidForSession);
+    if (may != currentConnections.end()) {
         auto thisSession = currentConnections[uuidForSession];
         if (diffMoreTtl(thisSession.creationTime)) {
             // если сессия протухла, выкинуть её из мапы
